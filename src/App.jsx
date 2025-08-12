@@ -557,55 +557,79 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Features data
+  // Features data - Enhanced for SEO
   const features = [
     {
       icon: <FiLock className="w-6 h-6" />,
-      title: "Private by Design",
-      description: "Your data never leaves your infrastructure",
+      title: "GDPR-Compliant AI Solutions",
+      description: "Built-in privacy controls ensure your enterprise documents remain secure and compliant with European data protection regulations. Zero data exposure to third parties.",
     },
     {
       icon: <FiDollarSign className="w-6 h-6" />,
-      title: "Cost Efficient",
-      description: "No per-query fees, predictable pricing",
+      title: "Transparent Enterprise Pricing",
+      description: "No hidden per-query fees or usage surprises. Predictable, scalable pricing that grows with your business needs. ROI-focused deployment.",
     },
     {
       icon: <FiZap className="w-6 h-6" />,
-      title: "Blazing Fast",
-      description: "Optimized for low-latency retrieval",
+      title: "High-Performance RAG Engine",
+      description: "Sub-second query responses with advanced retrieval algorithms. Optimized for enterprise workloads with intelligent caching and vector indexing.",
+    },
+    {
+      icon: <FiSettings className="w-6 h-6" />,
+      title: "Custom AI Models",
+      description: "Tailored RAG solutions trained on your specific industry and document types. Seamless integration with existing enterprise systems and workflows.",
+    },
+    {
+      icon: <FiMessageSquare className="w-6 h-6" />,
+      title: "Multi-Format Document Support",
+      description: "Process PDFs, Word docs, spreadsheets, presentations, and unstructured text. Advanced OCR and document parsing for comprehensive knowledge extraction.",
+    },
+    {
+      icon: <FiCalendar className="w-6 h-6" />,
+      title: "Real-Time Knowledge Updates",
+      description: "Automatic synchronization with your document repositories. Keep your AI knowledge base current with live updates and version control.",
     },
   ];
 
-  // Pricing tiers
+  // Pricing tiers - Enhanced for enterprise
   const pricing = [
     {
       name: "Starter",
       price: "$0",
-      description: "For individuals and small projects",
+      description: "Perfect for small teams exploring RAG capabilities",
       features: [
         "Basic RAG functionality",
+        "Up to 1,000 documents",
         "Community support",
-        "Local deployment",
+        "Local deployment guide",
+        "Standard security features",
       ],
     },
     {
-      name: "Pro",
-      price: "$99",
-      description: "For growing businesses",
+      name: "Professional",
+      price: "$299/month",
+      description: "For growing businesses with compliance needs",
       features: [
-        "Advanced analytics",
+        "Advanced RAG analytics",
+        "Unlimited documents",
         "Priority support",
-        "Slack/Notion integration",
+        "GDPR compliance tools",
+        "Custom integrations",
+        "Advanced security controls",
       ],
     },
     {
       name: "Enterprise",
       price: "Custom",
-      description: "For large organizations",
+      description: "Tailored solutions for large organizations",
       features: [
-        "Dedicated support",
-        "Custom integrations",
-        "On-prem deployment",
+        "Dedicated account manager",
+        "Custom model training",
+        "White-label deployment",
+        "24/7 enterprise support",
+        "SOC 2 Type II compliance",
+        "On-premises installation",
+        "Multi-tenant architecture",
       ],
     },
   ];
@@ -658,14 +682,22 @@ export default function App() {
             >
               Pricing
             </button>
-            <motion.button
+            <button
+              onClick={() => scrollTo("demo")}
+              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              Demo
+            </button>
+            <motion.a
+              href="https://dash.ragnosticai.com"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollTo("features")}
-              className="bg-white/90 text-purple-700 border border-purple-300 px-4 py-2 rounded-lg cursor-pointer hover:bg-purple-50 transition-colors duration-300"
+              className="bg-white/90 text-purple-700 border border-purple-300 px-4 py-2 rounded-lg cursor-pointer hover:bg-purple-50 transition-colors duration-300 flex items-center gap-2"
             >
-              Get Started
-            </motion.button>
+              Dashboard <FiArrowRight className="w-4 h-4" />
+            </motion.a>
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300 cursor-pointer"
@@ -691,18 +723,19 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl font-bold mb-6 text-white flex flex-col"
           >
-            <span>Your Documents</span>
-            <span>Your AI</span>
-            <span>Your Control</span>
+            <span>Enterprise RAG Solutions</span>
+            <span>GDPR-Compliant AI</span>
+            <span>Your Data, Your Control</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl mb-10 text-white/90 max-w-4xl mx-auto"
           >
-            Deploy a private RAG AI in minutes - no cloud leaks, no per-query
-            fees.
+            Transform your enterprise documents into intelligent, searchable knowledge bases with custom RAG solutions. 
+            GDPR-compliant, on-premises deployment ensures complete data sovereignty while delivering powerful AI insights 
+            from your proprietary documents.
           </motion.p>
 
           <motion.div
@@ -711,22 +744,33 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           >
-            <motion.button
+            <motion.a
+              href="https://dash.ragnosticai.com"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollTo("features")}
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              Get Started <FiArrowRight />
-            </motion.button>
+              Access Dashboard <FiArrowRight />
+            </motion.a>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollTo("demo")}
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg text-lg hover:bg-white/10 transition-all cursor-pointer"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg hover:bg-white/10 transition-all cursor-pointer"
             >
               Watch Demo
             </motion.button>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="mt-12 text-white/80 text-sm"
+          >
+            Trusted by enterprises worldwide • GDPR & SOC 2 compliant • 99.9% uptime SLA
           </motion.div>
         </motion.div>
       </section>
@@ -737,17 +781,23 @@ export default function App() {
         className="py-20 bg-white dark:bg-gray-800 relative"
       >
         <div className="container mx-auto px-6">
-          <motion.h2
-            className="text-3xl font-bold text-center mb-12 dark:text-white"
+          <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Enterprise-Grade, Without the Complexity
-          </motion.h2>
+            <h2 className="text-4xl font-bold mb-4 dark:text-white">
+              Enterprise-Grade RAG Solutions
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Purpose-built for enterprise security, compliance, and performance. 
+              Transform your document workflows with AI that understands your business context.
+            </p>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -755,15 +805,15 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-8 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all dark:bg-gray-700/50"
+                className="p-8 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg transition-all dark:bg-gray-700/50 hover:border-purple-300 dark:hover:border-purple-500"
               >
-                <div className="text-purple-600 dark:text-purple-400 mb-4">
+                <div className="text-purple-600 dark:text-purple-400 mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 dark:text-white">
+                <h3 className="text-xl font-bold mb-4 dark:text-white">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -772,10 +822,86 @@ export default function App() {
         </div>
       </section>
 
+      {/* About & Compliance Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900 relative">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl font-bold mb-6 dark:text-white">
+                Built for Enterprise Trust & Compliance
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                RagnosticAI specializes in creating custom RAG (Retrieval-Augmented Generation) solutions 
+                that respect your data sovereignty. We understand that enterprise documents contain your 
+                most valuable intellectual property, requiring the highest levels of security and compliance.
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                Our platform ensures complete GDPR compliance through on-premises deployment, zero data 
+                transmission to external services, and granular access controls. Every solution is tailored 
+                to your specific industry requirements and regulatory framework.
+              </p>
+              <motion.a
+                href="https://dash.ragnosticai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
+              >
+                Explore Dashboard <FiArrowRight />
+              </motion.a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-3 mb-3">
+                  <FiLock className="w-6 h-6 text-green-600" />
+                  <h3 className="text-xl font-semibold dark:text-white">GDPR Compliant</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Full compliance with European data protection regulations. Your data never leaves your infrastructure.
+                </p>
+              </div>
+              
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-3 mb-3">
+                  <FiSettings className="w-6 h-6 text-blue-600" />
+                  <h3 className="text-xl font-semibold dark:text-white">Custom Solutions</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Tailored RAG implementations designed for your specific industry, document types, and workflows.
+                </p>
+              </div>
+              
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-3 mb-3">
+                  <FiZap className="w-6 h-6 text-purple-600" />
+                  <h3 className="text-xl font-semibold dark:text-white">Enterprise Performance</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300">
+                  High-throughput processing with intelligent caching. Built to scale with your growing document repositories.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section
         id="pricing"
-        className="py-20 bg-gray-50 dark:bg-gray-900 relative"
+        className="py-20 bg-white dark:bg-gray-800 relative"
       >
         <div className="container mx-auto px-6">
           <motion.h2
@@ -795,7 +921,7 @@ export default function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {pricing.map((tier, index) => (
+            {pricing.map((tier) => (
               <motion.div
                 key={tier.name}
                 whileHover={{ y: -5 }}
@@ -860,23 +986,27 @@ export default function App() {
         id="demo"
         className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden"
       >
-        <NeuralNetworkBackground isDarkMode={darkMode} />
-
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 dark:text-white">
-              See It in Action
+            <h2 className="text-4xl font-bold mb-6 dark:text-white">
+              Ready to Transform Your Enterprise Documents?
             </h2>
             <p className="text-xl mb-8 text-gray-600 dark:text-gray-300">
-              Book a personalized demo to see how RAGnostic can transform your
-              workflows.
+              Schedule a personalized demo to see how RagnosticAI can revolutionize your document workflows. 
+              Our experts will show you custom RAG solutions tailored to your industry and compliance requirements.
             </p>
+            <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-600 dark:text-gray-400">
+              <span>✓ GDPR Compliant</span>
+              <span>✓ On-Premises Deployment</span>
+              <span>✓ 30-Day Free Trial</span>
+              <span>✓ No Data Transmission</span>
+            </div>
           </motion.div>
 
           <motion.div
@@ -884,103 +1014,174 @@ export default function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden max-w-3xl mx-auto"
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto"
           >
             <div className="grid md:grid-cols-2">
               {/* Left Side - Form */}
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-6 dark:text-white">
-                  Get in Touch
+                  Request Enterprise Demo
                 </h3>
-                <form className="space-y-4">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800 placeholder-gray-400 dark:placeholder-gray-500"
-                      placeholder="Your name"
-                    />
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="firstName"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >
+                        First Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800 placeholder-gray-400 dark:placeholder-gray-500"
+                        placeholder="John"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="lastName"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800 placeholder-gray-400 dark:placeholder-gray-500"
+                        placeholder="Doe"
+                      />
+                    </div>
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
-                      Email
+                      Business Email *
                     </label>
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800 placeholder-gray-400 dark:placeholder-gray-500"
-                      placeholder="your@email.com"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800 placeholder-gray-400 dark:placeholder-gray-500"
+                      placeholder="john.doe@company.com"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
-                      Company
+                      Company *
                     </label>
                     <input
                       type="text"
                       id="company"
-                      className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800 placeholder-gray-400 dark:placeholder-gray-500"
-                      placeholder="Company name"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800 placeholder-gray-400 dark:placeholder-gray-500"
+                      placeholder="Acme Corporation"
                     />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="useCase"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >
+                      Primary Use Case
+                    </label>
+                    <select
+                      id="useCase"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800"
+                    >
+                      <option value="">Select your primary use case</option>
+                      <option value="document-search">Document Search & Retrieval</option>
+                      <option value="knowledge-base">Knowledge Base Management</option>
+                      <option value="legal-compliance">Legal & Compliance</option>
+                      <option value="customer-support">Customer Support</option>
+                      <option value="research-analysis">Research & Analysis</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-lg font-medium mt-4 cursor-pointer"
+                    className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all cursor-pointer"
                   >
-                    Request Demo
+                    Schedule Demo
                   </motion.button>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                    By submitting, you agree to our Privacy Policy. No spam, unsubscribe anytime.
+                  </p>
                 </form>
               </div>
 
               {/* Right Side - Info */}
               <div className="bg-gradient-to-br from-purple-600 to-indigo-700 p-8 text-white flex flex-col justify-center">
-                <div className="space-y-6">
+                <div className="space-y-8">
+                  <div>
+                    <h4 className="text-2xl font-bold mb-4">What to Expect</h4>
+                  </div>
                   <div className="flex items-start gap-4">
                     <div className="mt-1">
-                      <FiCalendar className="w-5 h-5" />
+                      <FiCalendar className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold">30-minute demo</h4>
+                      <h4 className="font-bold text-lg">45-Minute Deep Dive</h4>
                       <p className="text-sm opacity-90">
-                        We'll show you exactly how it works
+                        Comprehensive walkthrough of RagnosticAI capabilities with your specific use cases
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="mt-1">
-                      <FiSettings className="w-5 h-5" />
+                      <FiSettings className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold">Customized for you</h4>
+                      <h4 className="font-bold text-lg">Custom Configuration</h4>
                       <p className="text-sm opacity-90">
-                        See your own use cases in action
+                        See how we can tailor the solution for your industry compliance and document types
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="mt-1">
-                      <FiMessageSquare className="w-5 h-5" />
+                      <FiLock className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold">Q&A included</h4>
+                      <h4 className="font-bold text-lg">Security Review</h4>
                       <p className="text-sm opacity-90">
-                        Get all your questions answered
+                        Detailed discussion of GDPR compliance, data sovereignty, and security architecture
                       </p>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1">
+                      <FiMessageSquare className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg">Q&A & Next Steps</h4>
+                      <p className="text-sm opacity-90">
+                        Technical questions, implementation timeline, and pilot program discussion
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="border-t border-white/20 pt-6">
+                    <p className="text-sm opacity-90">
+                      <strong>Alternative:</strong> Access our self-service dashboard at{' '}
+                      <a 
+                        href="https://dash.ragnosticai.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="underline hover:text-purple-200"
+                      >
+                        dash.ragnosticai.com
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -990,11 +1191,75 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-600 dark:text-gray-300">
-            © {new Date().getFullYear()} RAGnostic. All rights reserved.
-          </p>
+      <footer className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Company Info */}
+            <div className="md:col-span-2">
+              <div className="flex items-center gap-3 mb-6">
+                <img src={ragnosticLogo} alt="RagnosticAI" className="w-8 h-8" />
+                <h3 className="text-2xl font-bold">RagnosticAI</h3>
+              </div>
+              <p className="text-gray-300 mb-6 max-w-md">
+                Custom GDPR-compliant RAG solutions for enterprise documents. 
+                Transform your proprietary knowledge into intelligent, searchable AI systems 
+                while maintaining complete data sovereignty.
+              </p>
+              <div className="space-y-2 text-sm text-gray-400">
+                <p>Enterprise AI Solutions</p>
+                <p>GDPR & SOC 2 Compliant</p>
+                <p>On-Premises Deployment</p>
+              </div>
+            </div>
+
+            {/* Solutions */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="#features" className="hover:text-purple-400 transition-colors">Enterprise RAG</a></li>
+                <li><a href="#features" className="hover:text-purple-400 transition-colors">Document Intelligence</a></li>
+                <li><a href="#features" className="hover:text-purple-400 transition-colors">Knowledge Management</a></li>
+                <li><a href="#features" className="hover:text-purple-400 transition-colors">GDPR Compliance</a></li>
+                <li><a href="#pricing" className="hover:text-purple-400 transition-colors">Custom Models</a></li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="#demo" className="hover:text-purple-400 transition-colors">Contact Us</a></li>
+                <li><a href="https://dash.ragnosticai.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">Dashboard</a></li>
+                <li><a href="#demo" className="hover:text-purple-400 transition-colors">Request Demo</a></li>
+                <li><a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-purple-400 transition-colors">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-gray-800 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-400">
+                <p>© {new Date().getFullYear()} RagnosticAI. All rights reserved.</p>
+                <div className="flex gap-4">
+                  <span>Made with AI for Enterprise</span>
+                  <span>•</span>
+                  <span>Secure by Design</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://dash.ragnosticai.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  Launch Dashboard
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
