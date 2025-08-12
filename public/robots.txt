@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ragnosticai.com/sitemap.xml
+
+# Disallow sensitive areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /src/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /features
+Allow: /contact
+Allow: /privacy
+Allow: /terms
