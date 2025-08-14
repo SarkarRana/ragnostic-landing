@@ -109,8 +109,8 @@
 }
 
 /* Add cursor pointer for interactive elements */
-button, 
-a, 
+button,
+a,
 [role="button"],
 .clickable {
   cursor: pointer;
