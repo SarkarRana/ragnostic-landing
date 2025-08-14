@@ -562,32 +562,38 @@ export default function App() {
     {
       icon: <FiLock className="w-6 h-6" />,
       title: "GDPR-Compliant AI Solutions",
-      description: "Built-in privacy controls ensure your enterprise documents remain secure and compliant with European data protection regulations. Zero data exposure to third parties.",
+      description:
+        "Built-in privacy controls ensure your enterprise documents remain secure and compliant with European data protection regulations. Zero data exposure to third parties.",
     },
     {
       icon: <FiDollarSign className="w-6 h-6" />,
       title: "Transparent Enterprise Pricing",
-      description: "No hidden per-query fees or usage surprises. Predictable, scalable pricing that grows with your business needs. ROI-focused deployment.",
+      description:
+        "No hidden per-query fees or usage surprises. Predictable, scalable pricing that grows with your business needs. ROI-focused deployment.",
     },
     {
       icon: <FiZap className="w-6 h-6" />,
       title: "High-Performance RAG Engine",
-      description: "Sub-second query responses with advanced retrieval algorithms. Optimized for enterprise workloads with intelligent caching and vector indexing.",
+      description:
+        "Sub-second query responses with advanced retrieval algorithms. Optimized for enterprise workloads with intelligent caching and vector indexing.",
     },
     {
       icon: <FiSettings className="w-6 h-6" />,
       title: "Custom AI Models",
-      description: "Tailored RAG solutions trained on your specific industry and document types. Seamless integration with existing enterprise systems and workflows.",
+      description:
+        "Tailored RAG solutions trained on your specific industry and document types. Seamless integration with existing enterprise systems and workflows.",
     },
     {
       icon: <FiMessageSquare className="w-6 h-6" />,
       title: "Multi-Format Document Support",
-      description: "Process PDFs, Word docs, spreadsheets, presentations, and unstructured text. Advanced OCR and document parsing for comprehensive knowledge extraction.",
+      description:
+        "Process PDFs, Word docs, spreadsheets, presentations, and unstructured text. Advanced OCR and document parsing for comprehensive knowledge extraction.",
     },
     {
       icon: <FiCalendar className="w-6 h-6" />,
       title: "Real-Time Knowledge Updates",
-      description: "Automatic synchronization with your document repositories. Keep your AI knowledge base current with live updates and version control.",
+      description:
+        "Automatic synchronization with your document repositories. Keep your AI knowledge base current with live updates and version control.",
     },
   ];
 
@@ -723,9 +729,7 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl font-bold mb-6 text-white flex flex-col"
           >
-            <span>Enterprise RAG Solutions</span>
-            <span>GDPR-Compliant AI</span>
-            <span>Your Data, Your Control</span>
+            <span>AI That Understands Your Enterprise Data</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -733,9 +737,8 @@ export default function App() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-xl md:text-2xl mb-10 text-white/90 max-w-4xl mx-auto"
           >
-            Transform your enterprise documents into intelligent, searchable knowledge bases with custom RAG solutions. 
-            GDPR-compliant, on-premises deployment ensures complete data sovereignty while delivering powerful AI insights 
-            from your proprietary documents.
+            Turn internal documents into a powerful, private knowledge engine.
+            Secure. Compliant. Built for your business.
           </motion.p>
 
           <motion.div
@@ -763,14 +766,15 @@ export default function App() {
               Watch Demo
             </motion.button>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
             className="mt-12 text-white/80 text-sm"
           >
-            Trusted by enterprises worldwide • GDPR & SOC 2 compliant • 99.9% uptime SLA
+            Trusted by enterprises worldwide • GDPR & SOC 2 compliant • 99.9%
+            uptime SLA
           </motion.div>
         </motion.div>
       </section>
@@ -792,8 +796,9 @@ export default function App() {
               Enterprise-Grade RAG Solutions
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Purpose-built for enterprise security, compliance, and performance. 
-              Transform your document workflows with AI that understands your business context.
+              Purpose-built for enterprise security, compliance, and
+              performance. Transform your document workflows with AI that
+              understands your business context.
             </p>
           </motion.div>
 
@@ -836,14 +841,18 @@ export default function App() {
                 Built for Enterprise Trust & Compliance
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                RagnosticAI specializes in creating custom RAG (Retrieval-Augmented Generation) solutions 
-                that respect your data sovereignty. We understand that enterprise documents contain your 
-                most valuable intellectual property, requiring the highest levels of security and compliance.
+                RagnosticAI specializes in creating custom RAG
+                (Retrieval-Augmented Generation) solutions that respect your
+                data sovereignty. We understand that enterprise documents
+                contain your most valuable intellectual property, requiring the
+                highest levels of security and compliance.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                Our platform ensures complete GDPR compliance through on-premises deployment, zero data 
-                transmission to external services, and granular access controls. Every solution is tailored 
-                to your specific industry requirements and regulatory framework.
+                Our platform ensures complete GDPR compliance through
+                on-premises deployment, zero data transmission to external
+                services, and granular access controls. Every solution is
+                tailored to your specific industry requirements and regulatory
+                framework.
               </p>
               <motion.a
                 href="https://dash.ragnosticai.com"
@@ -867,30 +876,39 @@ export default function App() {
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center gap-3 mb-3">
                   <FiLock className="w-6 h-6 text-green-600" />
-                  <h3 className="text-xl font-semibold dark:text-white">GDPR Compliant</h3>
+                  <h3 className="text-xl font-semibold dark:text-white">
+                    GDPR Compliant
+                  </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Full compliance with European data protection regulations. Your data never leaves your infrastructure.
+                  Full compliance with European data protection regulations.
+                  Your data never leaves your infrastructure.
                 </p>
               </div>
-              
+
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center gap-3 mb-3">
                   <FiSettings className="w-6 h-6 text-blue-600" />
-                  <h3 className="text-xl font-semibold dark:text-white">Custom Solutions</h3>
+                  <h3 className="text-xl font-semibold dark:text-white">
+                    Custom Solutions
+                  </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Tailored RAG implementations designed for your specific industry, document types, and workflows.
+                  Tailored RAG implementations designed for your specific
+                  industry, document types, and workflows.
                 </p>
               </div>
-              
+
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center gap-3 mb-3">
                   <FiZap className="w-6 h-6 text-purple-600" />
-                  <h3 className="text-xl font-semibold dark:text-white">Enterprise Performance</h3>
+                  <h3 className="text-xl font-semibold dark:text-white">
+                    Enterprise Performance
+                  </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300">
-                  High-throughput processing with intelligent caching. Built to scale with your growing document repositories.
+                  High-throughput processing with intelligent caching. Built to
+                  scale with your growing document repositories.
                 </p>
               </div>
             </motion.div>
@@ -998,8 +1016,10 @@ export default function App() {
               Ready to Transform Your Enterprise Documents?
             </h2>
             <p className="text-xl mb-8 text-gray-600 dark:text-gray-300">
-              Schedule a personalized demo to see how RagnosticAI can revolutionize your document workflows. 
-              Our experts will show you custom RAG solutions tailored to your industry and compliance requirements.
+              Schedule a personalized demo to see how RagnosticAI can
+              revolutionize your document workflows. Our experts will show you
+              custom RAG solutions tailored to your industry and compliance
+              requirements.
             </p>
             <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-600 dark:text-gray-400">
               <span>✓ GDPR Compliant</span>
@@ -1097,11 +1117,19 @@ export default function App() {
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-gray-50 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:text-white text-gray-800"
                     >
                       <option value="">Select your primary use case</option>
-                      <option value="document-search">Document Search & Retrieval</option>
-                      <option value="knowledge-base">Knowledge Base Management</option>
-                      <option value="legal-compliance">Legal & Compliance</option>
+                      <option value="document-search">
+                        Document Search & Retrieval
+                      </option>
+                      <option value="knowledge-base">
+                        Knowledge Base Management
+                      </option>
+                      <option value="legal-compliance">
+                        Legal & Compliance
+                      </option>
                       <option value="customer-support">Customer Support</option>
-                      <option value="research-analysis">Research & Analysis</option>
+                      <option value="research-analysis">
+                        Research & Analysis
+                      </option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -1114,7 +1142,8 @@ export default function App() {
                     Schedule Demo
                   </motion.button>
                   <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                    By submitting, you agree to our Privacy Policy. No spam, unsubscribe anytime.
+                    By submitting, you agree to our Privacy Policy. No spam,
+                    unsubscribe anytime.
                   </p>
                 </form>
               </div>
@@ -1132,7 +1161,8 @@ export default function App() {
                     <div>
                       <h4 className="font-bold text-lg">45-Minute Deep Dive</h4>
                       <p className="text-sm opacity-90">
-                        Comprehensive walkthrough of RagnosticAI capabilities with your specific use cases
+                        Comprehensive walkthrough of RagnosticAI capabilities
+                        with your specific use cases
                       </p>
                     </div>
                   </div>
@@ -1141,9 +1171,12 @@ export default function App() {
                       <FiSettings className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg">Custom Configuration</h4>
+                      <h4 className="font-bold text-lg">
+                        Custom Configuration
+                      </h4>
                       <p className="text-sm opacity-90">
-                        See how we can tailor the solution for your industry compliance and document types
+                        See how we can tailor the solution for your industry
+                        compliance and document types
                       </p>
                     </div>
                   </div>
@@ -1154,7 +1187,8 @@ export default function App() {
                     <div>
                       <h4 className="font-bold text-lg">Security Review</h4>
                       <p className="text-sm opacity-90">
-                        Detailed discussion of GDPR compliance, data sovereignty, and security architecture
+                        Detailed discussion of GDPR compliance, data
+                        sovereignty, and security architecture
                       </p>
                     </div>
                   </div>
@@ -1165,17 +1199,19 @@ export default function App() {
                     <div>
                       <h4 className="font-bold text-lg">Q&A & Next Steps</h4>
                       <p className="text-sm opacity-90">
-                        Technical questions, implementation timeline, and pilot program discussion
+                        Technical questions, implementation timeline, and pilot
+                        program discussion
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border-t border-white/20 pt-6">
                     <p className="text-sm opacity-90">
-                      <strong>Alternative:</strong> Access our self-service dashboard at{' '}
-                      <a 
-                        href="https://dash.ragnosticai.com" 
-                        target="_blank" 
+                      <strong>Alternative:</strong> Access our self-service
+                      dashboard at{" "}
+                      <a
+                        href="https://dash.ragnosticai.com"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="underline hover:text-purple-200"
                       >
@@ -1197,13 +1233,18 @@ export default function App() {
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img src={ragnosticLogo} alt="RagnosticAI" className="w-8 h-8" />
+                <img
+                  src={ragnosticLogo}
+                  alt="RagnosticAI"
+                  className="w-8 h-8"
+                />
                 <h3 className="text-2xl font-bold">RagnosticAI</h3>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
-                Custom GDPR-compliant RAG solutions for enterprise documents. 
-                Transform your proprietary knowledge into intelligent, searchable AI systems 
-                while maintaining complete data sovereignty.
+                Custom GDPR-compliant RAG solutions for enterprise documents.
+                Transform your proprietary knowledge into intelligent,
+                searchable AI systems while maintaining complete data
+                sovereignty.
               </p>
               <div className="space-y-2 text-sm text-gray-400">
                 <p>Enterprise AI Solutions</p>
@@ -1216,11 +1257,46 @@ export default function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Solutions</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#features" className="hover:text-purple-400 transition-colors">Enterprise RAG</a></li>
-                <li><a href="#features" className="hover:text-purple-400 transition-colors">Document Intelligence</a></li>
-                <li><a href="#features" className="hover:text-purple-400 transition-colors">Knowledge Management</a></li>
-                <li><a href="#features" className="hover:text-purple-400 transition-colors">GDPR Compliance</a></li>
-                <li><a href="#pricing" className="hover:text-purple-400 transition-colors">Custom Models</a></li>
+                <li>
+                  <a
+                    href="#features"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Enterprise RAG
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#features"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Document Intelligence
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#features"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Knowledge Management
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#features"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    GDPR Compliance
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#pricing"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Custom Models
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -1228,11 +1304,48 @@ export default function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#demo" className="hover:text-purple-400 transition-colors">Contact Us</a></li>
-                <li><a href="https://dash.ragnosticai.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">Dashboard</a></li>
-                <li><a href="#demo" className="hover:text-purple-400 transition-colors">Request Demo</a></li>
-                <li><a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-purple-400 transition-colors">Terms of Service</a></li>
+                <li>
+                  <a
+                    href="#demo"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://dash.ragnosticai.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#demo"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Request Demo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    Terms of Service
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -1241,7 +1354,9 @@ export default function App() {
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-400">
-                <p>© {new Date().getFullYear()} RagnosticAI. All rights reserved.</p>
+                <p>
+                  © {new Date().getFullYear()} RagnosticAI. All rights reserved.
+                </p>
                 <div className="flex gap-4">
                   <span>Made with AI for Enterprise</span>
                   <span>•</span>
@@ -1249,9 +1364,9 @@ export default function App() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <a 
-                  href="https://dash.ragnosticai.com" 
-                  target="_blank" 
+                <a
+                  href="https://dash.ragnosticai.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
